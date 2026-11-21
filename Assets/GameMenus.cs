@@ -7,6 +7,7 @@ public class GameMenus : MonoBehaviour
     [SerializeField] private GameObject titlePanel;
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject winMessage;
+    [SerializeField] private GameObject gameOverPanel;
 
     private void Start()
     {
@@ -17,7 +18,7 @@ public class GameMenus : MonoBehaviour
 
     private void Update()
     {
-        if (titlePanel.activeSelf || winMessage.activeInHierarchy)
+        if (titlePanel.activeSelf || winMessage.activeInHierarchy || gameOverPanel.activeInHierarchy)
             return;
 
         if (Keyboard.current?.escapeKey.wasPressedThisFrame == true)

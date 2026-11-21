@@ -633,6 +633,8 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  rollSpeed: 5
+  rollDuration: 0.5
 --- !u!95 &1666460900
 Animator:
   serializedVersion: 7

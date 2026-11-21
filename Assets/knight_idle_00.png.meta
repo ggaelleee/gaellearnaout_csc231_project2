@@ -1,7 +1,10 @@
 fileFormatVersion: 2
-guid: 195e1c5e7254dc04fbcef0b4df1becec
+guid: 2e051fbf5d9d91840ac8542e8a01aa25
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 1125142341622394454
+    second: knight_idle_00_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -39,7 +42,7 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 0
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -95,7 +98,29 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: knight_idle_00_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 0
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65e672a9ffe4d9f00800000000000000
+      internalID: 1125142341622394454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -109,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      knight_idle_00_0: 1125142341622394454
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

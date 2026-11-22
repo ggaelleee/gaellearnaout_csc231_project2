@@ -9,12 +9,12 @@ public class CoinCounter : MonoBehaviour
     private void Awake()
     {
         label = GetComponent<TMP_Text>();
-        label.text = "Coins: 0";
+        label.text = count.ToString();
     }
 
     public void AddCoin()
     {
         count++;
-        label.text = $"Coins: {count}";
+        label.text = count.ToString();
     }
 }

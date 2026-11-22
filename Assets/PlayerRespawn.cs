@@ -23,7 +23,7 @@ public class PlayerRespawn : MonoBehaviour
         animator = GetComponent<Animator>();
 
         respawnPosition = body.position;
-        livesCounter.text = $"Lives: {lives}";
+        livesCounter.text = lives.ToString();
     }
 
     private void FixedUpdate()
@@ -48,7 +48,7 @@ public class PlayerRespawn : MonoBehaviour
     private IEnumerator PlayHurtAndRespawn()
     {
         lives--;
-        livesCounter.text = $"Lives: {lives}";
+        livesCounter.text = lives.ToString();
 
         movement.enabled = false;
         body.linearVelocity = Vector2.zero;

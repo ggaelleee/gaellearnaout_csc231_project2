@@ -1,2 +1,15 @@
 fileFormatVersion: 2
 guid: a79c4653e1b948b4ba90f90a0a3727ac
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - livesCounter: {instanceID: 0}
+  - gameOverPanel: {instanceID: 0}
+  - hurtSound: {fileID: 8300000, guid: 478a95faed4e3d341afe578b884e889d, type: 3}
+  - deathSound: {fileID: 8300000, guid: 81e5faef11a44e9458516573c9339d49, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

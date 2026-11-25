@@ -8,10 +8,13 @@ public class PlayerRespawn : MonoBehaviour
     [SerializeField] private TMP_Text livesCounter;
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private float hurtDuration = 0.45f;
+    [SerializeField] private AudioClip hurtSound;
+    [SerializeField] private AudioClip deathSound;
 
     private Rigidbody2D body;
     private PlayerMovement movement;
     private Animator animator;
+    private AudioSource audioSource;
     private Vector2 respawnPosition;
     private int lives = 3;
     private bool isRespawning;
@@ -21,6 +24,7 @@ public class PlayerRespawn : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         movement = GetComponent<PlayerMovement>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
 
         respawnPosition = body.position;
         livesCounter.text = lives.ToString();
@@ -53,6 +57,12 @@ public class PlayerRespawn : MonoBehaviour
         movement.enabled = false;
         body.linearVelocity = Vector2.zero;
         body.simulated = false;
+
+        AudioClip sound = lives == 0 ? deathSound : hurtSound;
+        if (audioSource != null && sound != null)
+        {
+            audioSource.PlayOneShot(sound);
+        }
 
         animator.Play("KnightHurt", 0, 0f);
         yield return new WaitForSeconds(hurtDuration);

@@ -47,8 +47,14 @@ public class GameMenus : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void Quit()
+    
+       public void Quit()
     {
-        Application.Quit();
-    }
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+    Application.Quit();
+#endif
+  
+}
 }
